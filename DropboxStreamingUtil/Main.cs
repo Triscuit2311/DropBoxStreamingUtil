@@ -8,7 +8,7 @@ namespace DropboxStreamingUtil
     public static class Main
     {
         public static async Task<byte[]> _Download(string path, string apiToken)
-        { // ...("/Folder/FancyCheat.dll", "PBQVCOaLLgEAAAAAAAAAAaXzmK29rXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" )
+        { // ...("/Folder/File.dll", "PBQVCOaLLgEAAAAAAAAAAaXzmK29rXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" )
             var dbx = new DropboxClient(apiToken);
             using (var response = await dbx.Files.DownloadAsync(path))
             {
