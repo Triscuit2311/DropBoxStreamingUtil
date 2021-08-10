@@ -25,6 +25,20 @@ namespace DropboxStreamingUtil
         {
             return gcHandle.AddrOfPinnedObject();
         }
+
+        public static bool FreeHandle(GCHandle gcHandle)
+        {
+            try
+            {
+                gcHandle.Free();
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
         
     }
 }
